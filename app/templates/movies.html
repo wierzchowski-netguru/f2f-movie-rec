@@ -1,0 +1,22 @@
+<head>
+    <style>
+        .calculated {
+            color: red;
+        }
+        td {
+            width: 150px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <table border="1px">
+        {% for row in ratings %}
+        <tr>
+            {% for item in row %}
+            <td class="{{ item.1 }}">{{ item.0 }}</td>
+            {% endfor %}
+        </tr>
+        {% endfor %}
+    </table>
+</body>
